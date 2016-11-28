@@ -1,0 +1,4 @@
+/config/
+*.bac
+/bower_components/
+/node_modules/
