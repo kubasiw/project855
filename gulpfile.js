@@ -15,7 +15,7 @@ gulp.task('serve', ['rwd'], function() {
         server: "./"
     });
      
-   gulp.watch("./scss/*.scss", ['rwd']);
+   gulp.watch("./sass/**/*.scss", ['rwd']);
     
    //Deploy na ftp
 //   gulp.watch("./css/*", ['deployCss']);
@@ -29,7 +29,7 @@ gulp.task('serve', ['rwd'], function() {
 
 
 gulp.task('rwd', function() { // funkcja callback
-    return gulp.src('./scss/*.scss') //-->zrodlo
+    return gulp.src('./sass/**/*.scss') //-->zrodlo
         .pipe(sourcemaps.init())
         .pipe(sass({errLogToConsole:true}))
         .pipe(sourcemaps.write())        

@@ -1,0 +1,141 @@
+body {
+    font-family: 'Oswald', 'arial', 'helvetica';
+    font-size: 3.6vw;
+    background-color: grey;
+   
+}
+
+.main-container { 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left {float: left;}
+.help-border {border: 1px solid orange;}
+.flex {display: flex;}
+.just-center {justify-content: center;}
+
+
+.volvoBox {
+    position: relative;
+}
+
+.whell1 {
+        position: absolute;
+        width: 13.2%;
+        top: 56%;
+        left: 13.3%;
+    }
+
+.whell2 {
+    position: absolute;
+    width: 13.2%;
+    top: 56%;
+    left: 71.3%;
+}
+
+#indicatorFront {
+    display: inline-block;
+    fill: orange;
+    box-shadow: 0px 0px 85px 17px rgba(200,255,0,1);
+}
+
+#indicatorRear {
+    fill: orange;
+}
+
+#indicatorSide {
+    fill: orange;
+}
+
+#headlight {
+    fill: white;
+}
+
+#rearLight {
+    fill: white;
+}
+
+.lightsOn {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: rgba(244, 244, 244, 0.41);
+}
+
+.smoke {
+    position: absolute;
+    width: 12%;
+    height: 10%;
+    left: 97%;
+    top: 63%;
+    transform: rotate(-25deg);
+}
+
+.smoke1 {
+    position: absolute;
+    width: 20%;
+    height: 65%;
+    left: 15%;
+    background-color: rgba(244, 244, 244, 0.41);
+    border-radius: 50%;
+}
+
+.smoke2 {
+    position: absolute;
+    width: 22%;
+    height: 75%;
+    left: 27%;
+    background-color: rgba(244, 244, 244, 0.41);
+    border-radius: 50%;
+}
+
+.smoke3 {
+    position: absolute;
+    width: 25%;
+    height: 85%;
+    left: 38%;
+    background-color: rgba(244, 244, 244, 0.41);
+    border-radius: 50%;
+}
+
+.smoke4 {
+    position: absolute;
+    width: 25%;
+    height: 90%;
+    left: 55%;
+    background-color: rgba(244, 244, 244, 0.41);
+    border-radius: 50%;
+}
+
+.smoke5 {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    left: 70%;
+    background-color: rgba(244, 244, 244, 0.41);
+    border-radius: 50%;
+}
+
+.smoke6 {
+    position: absolute;
+    width: 28%;
+    height: 115%;
+    left: 85%;
+    background-color: rgba(244, 244, 244, 0.41);
+    border-radius: 50%;
+}
+
+.indicRglow {
+    position: absolute;
+    width: 3%;
+    height: 15%;
+    left: 93.5%;
+    top: 17%;
+    background-color: rgba(255, 120, 0, 0.4);
+    box-shadow: 0px 0px 75px 14px #ff9300;
+    border-radius: 50%;
+}
+

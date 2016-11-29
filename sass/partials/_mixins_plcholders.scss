@@ -1,0 +1,134 @@
+%clair_marg {
+    width:334px;
+    height: 227px;
+    margin-top: 27px;
+}
+
+%trans {
+    width: 334px;
+    height: 62px;
+    margin-top: 151px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+%inputs {
+    width: 334px;
+    height: 254px;
+    margin-top: 27px;
+    border: 1px solid #dcdcdc;
+}
+
+%textBox {
+    position: absolute;
+    width: 138px;
+    height: 26p;
+    margin-left: 15px;
+    margin-top: 15px;
+    border-bottom: 7px solid #27c7ab;
+    font-weight: bold;
+}
+
+%lorems {
+    position: absolute;
+    line-height: 20px;
+    width: 300px;
+    margin: 15px;
+    margin-top: 60px;
+}
+
+%cennik_kontakt {
+    width: 320px;
+    height: 36px;
+    margin-top: 47px;
+    font-size: 21px;
+    color: #575757;
+    border-bottom: 7px solid #27c7ab;
+}
+
+%badge {
+    float: left;
+    width: 326px;
+    height: 497px;
+    background-color: #f9f9f9;
+    border: 2px solid #d6d5d5;
+}
+
+%circleOut {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    width: 53px;
+    height: 53px;
+    margin-top: -37px;
+    background-color: white;
+    border: 2px solid #d6d5d5;
+    border-radius: 50%;
+}
+
+%circleIn {
+    width: 27px;
+    height: 27px;
+    background-color: #d6d5d5;
+    border-radius: 50%;
+}
+
+%badgeName {
+    width: 326px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    color: #27c7ab; 
+}
+
+%circlePrice {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    color: #d6d5d5;
+    width: 125px;
+    height: 125px;
+    margin-top: 70px;
+    background-color: white;
+    border: 2px solid #d6d5d5;
+    border-radius: 50%;
+}
+
+%badgeOffertDark {
+    position: relative;
+    width: 322px;
+    height: 43px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #939393;
+    background-color: #e4e4e4;
+}
+
+%badgeOffertLight {
+    position: relative;
+    width: 322px;
+    height: 43px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #808080;
+    background-color: #f1f1f1;
+}
+
+
+%join {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #27c7ab;
+    border-radius: 7px;
+}
