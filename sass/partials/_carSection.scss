@@ -1,0 +1,51 @@
+.volvoBox {
+    position: relative;
+}
+
+.shadow {
+    position: absolute;
+    width: 90%;
+    height: 5%;
+    top: 90%;
+    left: 5%;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+}
+
+.whell1 {
+        position: absolute;
+        width: 13.2%;
+        top: 56%;
+        left: 13.3%;
+        transform: rotate(-1000000deg);
+        transition: 6s;
+}
+
+.whell2 {
+    position: absolute;
+    width: 13.2%;
+    top: 56%;
+    left: 71.3%;
+}
+
+#indicatorFront {
+    display: inline-block;
+    fill: orange;
+    box-shadow: 0px 0px 85px 17px rgba(200,255,0,1);
+}
+
+#indicatorRear {
+    fill: orange;
+}
+
+#indicatorSide {
+    fill: orange;
+}
+
+#headlight {
+    fill: white;
+}
+
+#rearLight {
+    fill: white;
+}
