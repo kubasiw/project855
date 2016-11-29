@@ -36,7 +36,7 @@ body {
         width: 13.2%;
         top: 56%;
         left: 13.3%;
-        transform: rotate(-100000deg);
+        transform: rotate(-1000000deg);
         transition: 6s;
     }
 
@@ -198,5 +198,108 @@ body {
     background-color: rgba(255, 120, 0, 0.4);
     box-shadow: 0px 0px 75px 14px #ff9300;
     border-radius: 50%;
+}
+
+.ctrlPanel {
+    .row {
+        height: 100%;
+    }
+}
+
+.onOff {
+    display:flex;
+    justify-content: space-between;
+}
+
+.keyBox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.keysCircle1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:120px;
+    height:120px;
+    background-color: lightgray;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.keysCircle2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: lightslategrey;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.key {
+    position: absolute;
+    width: 15px;
+    height:95px;
+    background-color: dimgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.off {
+    position: absolute;
+    font-size: 16px;
+}
+
+.start {
+    position: absolute;
+    font-size: 16px;
+    left: 195px;
+    top: 50px;
+}
+
+.lightBox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.lightCircle1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:120px;
+    height:120px;
+    background-color: #515151;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.lightCircle2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: lightslategrey;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.light {
+    position: absolute;
+    width: 25px;
+    height:95px;
+    background-color: dimgrey;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
