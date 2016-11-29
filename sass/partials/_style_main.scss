@@ -21,12 +21,22 @@ body {
     position: relative;
 }
 
+.shadow {
+    position: absolute;
+    width: 90%;
+    height: 5%;
+    top: 90%;
+    left: 5%;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+}
+
 .whell1 {
         position: absolute;
         width: 13.2%;
         top: 56%;
         left: 13.3%;
-        transform: rotate(-30000deg);
+        transform: rotate(-100000deg);
         transition: 6s;
     }
 
