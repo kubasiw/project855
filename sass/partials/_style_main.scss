@@ -26,6 +26,8 @@ body {
         width: 13.2%;
         top: 56%;
         left: 13.3%;
+        transform: rotate(-30000deg);
+        transition: 6s;
     }
 
 .whell2 {
@@ -78,6 +80,18 @@ body {
     border-radius: 50%;
     background-color: rgba(255, 250, 244, 0.53);
     box-shadow: 0px 0px 75px 14px rgba(255, 251, 246, 0.75);
+}
+
+.revLightOn {
+    position: absolute;
+    width: 2%;
+    height: 5%;
+    top: 40%;
+    left: 96%;
+    transform: rotate(-10deg);
+    border-radius: 50%;
+    background-color: rgba(255, 250, 244, 0.53);
+    box-shadow: 0px 0px 75px 14px rgba(255,255,255,0.75);
 }
 
 .smoke {
