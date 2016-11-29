@@ -57,12 +57,27 @@ body {
     fill: white;
 }
 
-.lightsOn {
+.lightsOn1 {
     position: absolute;
     width: 10%;
     height: 10%;
+    top: 52%;
+    left: -5%;
+    transform: rotate(-10deg);
     border-radius: 50%;
-    background-color: rgba(244, 244, 244, 0.41);
+    background-color: rgba(255, 250, 244, 0.53);
+    box-shadow: 0px 0px 75px 14px rgba(255, 251, 246, 0.75);
+}
+
+.lightsOn2 {
+    position: absolute;
+    width: 450%;
+    height: 230%;
+    top: -70%;
+    left: -372%;
+    border-radius: 50%;
+    background-color: rgba(255, 250, 244, 0.53);
+    box-shadow: 0px 0px 75px 14px rgba(255, 251, 246, 0.75);
 }
 
 .smoke {
@@ -129,7 +144,7 @@ body {
 }
 
 .indicRglow {
-        position: absolute;
+    position: absolute;
     width: 3%;
     height: 9%;
     left: 93.5%;
