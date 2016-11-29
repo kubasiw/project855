@@ -296,10 +296,21 @@ body {
 
 .light {
     position: absolute;
+    display: flex;
+    justify-content: center;
     width: 25px;
     height:95px;
     background-color: dimgrey;
     border: 2px solid black;
     border-radius: 10px;
+}
+
+.arrow {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-bottom: 10px solid white;
+    border-left: 8px solid rgba(255, 192, 203, 0);
+    border-right: 8px solid rgba(255, 192, 203, 0);
 }
 
