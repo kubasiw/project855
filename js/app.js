@@ -145,9 +145,12 @@ jQuery(document).ready(function(){
     function gearBox() {
         
         gD.on('click', function(){
+            //na tym skończyłem wczoraj
+            jQuery(this).addClass('buttonLights');
             knob.css('left', '186'+'px')
                 .css('transition', '1s')
                 .removeClass('flashWhite');
+            
             
             if (!knob.hasClass('flashWhite')) {
                 setTimeout(function(){
@@ -172,6 +175,13 @@ jQuery(document).ready(function(){
         gR.on('click', function(){
             knob.css('left', '139'+'px')
                 .css('transition', '1s')
+            
+            // Na tym skończyłem wczoraj
+            if (allGears.hasClass('buttonLights')) {
+                allGears.removeClass('buttonLights'), function(){
+                    gR.addClass('buttonLights');
+                };
+            };
                 
             
             if (key.hasClass('engineIsOn')) {
