@@ -1,5 +1,6 @@
 .lightsOn1 {
     @extend %effects1;
+    opacity: 0;
     width: 10%;
     height: 10%;
     top: 52%;
@@ -24,8 +25,9 @@
     transform: rotate(-10deg);
 }
 
-.smoke {
+.smokeBox {
     position: absolute;
+    opacity: 0;
     width: 12%;
     height: 10%;
     left: 97%;

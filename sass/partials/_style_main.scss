@@ -30,6 +30,7 @@ body {
 
 .keyBox {
     position: relative;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     height: 100%;
@@ -82,6 +83,7 @@ body {
 
 .lightBox {
     position: relative;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     height: 100%;
@@ -132,7 +134,7 @@ body {
 }
 
 
-.indicatorBox {
+.triangleBox {
     position: relative;
     display: flex;
     justify-content: center;
@@ -140,39 +142,26 @@ body {
     height: 100%;
 }
 
-.indicatorArm {
+.triangleRed {
     position: absolute;
-    display: flex;
-    justify-content: flex-start;
-    width: 150px;
-    height:30px;
-    margin-top: 50px;
-    background-color: dimgrey;
-    border: 2px solid black;
-    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    top: -8px;
+    border-bottom: 74px solid rgba(255, 0, 0, 1);
+    border-left: 50px solid rgba(255, 192, 203, 0);
+    border-right: 50px solid rgba(255, 192, 203, 0);
 }
 
-.arrowUp {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    top: -4px;
-    left: 7px;
-    border-bottom: 7px solid white;
-    border-left: 7px solid rgba(255, 192, 203, 0);
-    border-right: 7px solid rgba(255, 192, 203, 0);
-}
 
-.arrowDown {
+.triangleWhite {
     position: absolute;
-    width: 14px;
+    width: 10px;
     height: 14px;
-    top: 16px;
-    left: 7px;
-    border-bottom: 7px solid white;
-    border-left: 7px solid rgba(255, 192, 203, 0);
-    border-right: 7px solid rgba(255, 192, 203, 0);
-    transform: rotate(180deg);
+    top: 45px;
+    left: -28px;
+    border-bottom: 45px solid white;
+    border-left: 28px solid rgba(255, 192, 203, 0);
+    border-right: 28px solid rgba(255, 192, 203, 0);
 }
 
 .gearboxBox {
