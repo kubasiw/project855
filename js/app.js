@@ -23,7 +23,6 @@ jQuery(document).ready(function(){
     var lightsOn1 = jQuery('.lightsOn1');
     
     
-    
     // engine on / off
     function engineOnOff() { 
         keyBox.on('click', function(){
@@ -84,7 +83,47 @@ jQuery(document).ready(function(){
     lightsOnOff();
     
     
+    // Indicators
+    var glows = jQuery(('div[class*=glow]'));
+    var indicators = jQuery(('[id*=indicator]'));
+    var triangleBox = jQuery('.triangleBox');
+    var flashing;
     
-}); // very last DOM colons
+    function indicatorsOnOff() {
+        triangleBox.on('click', function(){
+           
+            if (jQuery(this).attr('on')){
+                clearInterval(flashing);
+                jQuery(this).removeAttr('on');
+                glows.css('opacity', '0');
+                indicators.css('opacity', '0');
+                
+            } else {
+                
+                jQuery(this).attr('on','true');
+                //var status = 'off';
+                flashing = setInterval(function(){
+                    if (status=='off'){   
+                        status='on';
+                        glows.css('opacity', '1')
+                             .css('transition', '500ms');
+
+                        indicators.css('opacity', '1')
+                                  .css('transition', '500ms');
+                    } else {
+                        status='off';
+                        glows.css('opacity', '0');
+                        indicators.css('opacity', '0');
+                    }
+                },550);
+            }
+        });
+    };
+    indicatorsOnOff();
+    
+    
+    
+    
+}); // end of DOM
 
    
