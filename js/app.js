@@ -87,7 +87,7 @@ jQuery(document).ready(function(){
     var glows = jQuery(('div[class*=glow]'));
     var indicators = jQuery(('[id*=indicator]'));
     var triangleBox = jQuery('.triangleBox');
-    
+    var triangleWhite = jQuery('.triangleWhite');
     
     function indicatorsOnOff() {
         triangleBox.on('click', function(){
@@ -97,6 +97,7 @@ jQuery(document).ready(function(){
                 jQuery(this).removeAttr('on');
                 glows.css('opacity', '0');
                 indicators.css('opacity', '0');
+                triangleWhite.css('border-bottom', '45px solid white');
                 
             } else {
                 
@@ -109,11 +110,14 @@ jQuery(document).ready(function(){
                              .css('transition', '500ms');
                         indicators.css('opacity', '1')
                                   .css('transition', '500ms');
+                        triangleWhite.css('border-bottom', '45px solid #C4BD40')
+                                     .css('transition', '500ms');
                         
                     } else {
                         status='off';
                         glows.css('opacity', '0');
                         indicators.css('opacity', '0');
+                        triangleWhite.css('border-bottom', '45px solid white');
                     }
                 },550);
             }
