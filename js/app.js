@@ -25,34 +25,63 @@ jQuery(document).ready(function(){
     
     
     // engine on / off
-    function engineOn() {
+    function engineOnOff() { 
         keyBox.on('click', function(){
-            key .css('transform','rotate(90deg)')
-                .css('transition', '500ms');
-            setTimeout(function() {
-                smokeBox.css('opacity','1')
-                        .css('transition', '1500ms');
-            },500);
+           
+            if (key.hasClass('engineIsOn')) {
+             
+                key.removeClass('engineIsOn');
+                key.css('transform','rotate(0deg)')
+                   .css('transition', '500ms');
+                setTimeout(function() {
+                    smokeBox.css('opacity','0')
+                            .css('transition', '1500ms');
+                },500);
+             
+            } else {
+                 key.addClass('engineIsOn');
+                 key.css('transform','rotate(90deg)')
+                    .css('transition', '500ms');
+                 setTimeout(function() {
+                    smokeBox.css('opacity','1')
+                            .css('transition', '1500ms');
+                },500);
+            }
         });
     };
-    engineOn();
+    engineOnOff();
+    
     
     
     // lights on / off
-    function lightsOn() {
+    function lightsOnOff() { 
         lightBox.on('click', function(){
-            light.css({'transform': 'rotate(90deg)'})
-                 .css('transition', '500ms');
-            setTimeout(function() {
-                lightsOn1.css('opacity','1')
-            .css('transition', '1500ms');
-            },500);
+           
+            if (light.hasClass('lightsIsOn')) {
+             
+                light.removeClass('lightsIsOn');
+                light.css('transform','rotate(0deg)')
+                     .css('transition', '500ms');
+                setTimeout(function() {
+                    lightsOn1.css('opacity','0')
+                             .css('transition', '100ms');
+                },500);
+             
+            } else {
+                 light.addClass('lightsIsOn');
+                 light.css('transform','rotate(90deg)')
+                       .css('transition', '500ms');
+                 setTimeout(function() {
+                    lightsOn1.css('opacity','1')
+                             .css('transition', '100ms');
+                },500);
+            }
         });
     };
-    lightsOn();
+    lightsOnOff();
     
     
     
-});
+}); // very last DOM colons
 
    
