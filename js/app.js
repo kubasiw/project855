@@ -172,7 +172,17 @@ jQuery(document).ready(function(){
         gR.on('click', function(){
             knob.css('left', '139'+'px')
                 .css('transition', '1s')
-                .addClass('flashWhite');
+                
+            
+            if (key.hasClass('engineIsOn')) {
+                knob.addClass('flashWhite');
+                setTimeout(function() {
+                    wheelF.css('transform','rotate(10000deg)')
+                          .css('transition', '20s');
+                    wheelR.css('transform','rotate(10000deg)')
+                          .css('transition', '20s');
+                },1000);
+            };
             
             if (knob.hasClass('flashWhite')) {
                 setTimeout(function(){
@@ -182,15 +192,6 @@ jQuery(document).ready(function(){
                                 .css('transition', '500ms');
                 },1000);
             }
-            
-            if (key.hasClass('engineIsOn')) {
-               setTimeout(function() {
-                    wheelF.css('transform','rotate(10000deg)')
-                          .css('transition', '20s');
-                    wheelR.css('transform','rotate(10000deg)')
-                          .css('transition', '20s');
-                },1000);
-            };
         });
         
         
