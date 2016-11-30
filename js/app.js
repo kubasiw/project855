@@ -104,8 +104,8 @@ jQuery(document).ready(function(){
                 jQuery(this).attr('on','true');
                 //var status = 'off';
                 flashing = setInterval(function(){
-                    if (status=='off'){   
-                        status='on';
+                    if (status == 'off'){   
+                        status = 'on';
                         glows.css('opacity', '1')
                              .css('transition', '500ms');
                         indicators.css('opacity', '1')
@@ -134,37 +134,95 @@ jQuery(document).ready(function(){
     var allGears = jQuery(('div[class*=gear_]'));
     
     var knob = jQuery('.gearKnobLow');
+    var revLightGlow = jQuery('.revLightOn');
+    var revLight = jQuery('#rearLight');
     
     var wheelF = jQuery('.wheel1');
     var wheelR = jQuery('.wheel2');
+    console.log(wheelF);
     
     
     function gearBox() {
         
         gD.on('click', function(){
-           knob.css('left', '186'+'px')
-                .css('transition', '1s');
-           setTimeout(function() {
-                wheelF.css('transform','rotate(200000deg)')
-                      .css('transition', '20s');
-            },1000);
+            knob.css('left', '186'+'px')
+                .css('transition', '1s')
+                .removeClass('flashWhite');
+            
+            if (!knob.hasClass('flashWhite')) {
+                setTimeout(function(){
+                    revLight.css('opacity', '0')
+                            .css('transition', '500ms');
+                    revLightGlow.css('opacity', '0')
+                                .css('transition', '500ms');
+                },500);
+            }
+            
+            if (key.hasClass('engineIsOn')) {
+                setTimeout(function() {
+                    wheelF.css('transform','rotate(-10000deg)')
+                          .css('transition', '20s');
+                    wheelR.css('transform','rotate(-10000deg)')
+                          .css('transition', '20s');
+                },500);
+            };
         });
         
         
         gR.on('click', function(){
             knob.css('left', '139'+'px')
-                .css('transition', '1s');
+                .css('transition', '1s')
+                .addClass('flashWhite');
+            
+            if (knob.hasClass('flashWhite')) {
+                setTimeout(function(){
+                    revLight.css('opacity', '1')
+                            .css('transition', '500ms');
+                    revLightGlow.css('opacity', '1')
+                                .css('transition', '500ms');
+                },1000);
+            }
+            
+            if (key.hasClass('engineIsOn')) {
+               setTimeout(function() {
+                    wheelF.css('transform','rotate(10000deg)')
+                          .css('transition', '20s');
+                    wheelR.css('transform','rotate(10000deg)')
+                          .css('transition', '20s');
+                },1000);
+            };
         });
+        
         
         
         gN.on('click', function(){
             knob.css('left', '92'+'px')
-                .css('transition', '1s');
+                .css('transition', '1s')
+                .removeClass('flashWhite');
+            
+            if (!knob.hasClass('flashWhite')) {
+                setTimeout(function(){
+                    revLight.css('opacity', '0')
+                            .css('transition', '500ms');
+                    revLightGlow.css('opacity', '0')
+                                .css('transition', '500ms');
+                },500);
+            }
         });
         
         gP.on('click', function(){
             knob.css('left', '45'+'px')
-                .css('transition', '1s');
+                .css('transition', '1s')
+                .removeClass('flashWhite');
+            
+            if (!knob.hasClass('flashWhite')) {
+                setTimeout(function(){
+                    revLight.css('opacity', '0')
+                            .css('transition', '500ms');
+                    revLightGlow.css('opacity', '0')
+                                .css('transition', '500ms');
+                },500);
+            }
         });
     }
     gearBox();

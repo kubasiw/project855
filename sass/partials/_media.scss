@@ -1,9 +1,19 @@
-@media (max-width: 600px) {
-
+@media (max-width: 640px) {
+    .main-container {
+        background-color: darkorchid;
+    }
+    .onOff {
+    flex-wrap: wrap;
+  }
     header {
+        .row {
+            display:flex;
+            flex-wrap: wrap;
+        }
     }
-        row {
-            flex-direction: column;
+    nav {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
-
 }
