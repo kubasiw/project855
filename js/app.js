@@ -52,7 +52,6 @@ jQuery(document).ready(function(){
     engineOnOff();
     
     
-    
     // lights on / off
     function lightsOnOff() { 
         lightBox.on('click', function(){
@@ -65,6 +64,8 @@ jQuery(document).ready(function(){
                 setTimeout(function() {
                     lightsOn1.css('opacity','0')
                              .css('transition', '100ms');
+                    headlight.css('opacity','0')
+                             .css('transition', '100ms');
                 },500);
              
             } else {
@@ -73,6 +74,8 @@ jQuery(document).ready(function(){
                        .css('transition', '500ms');
                  setTimeout(function() {
                     lightsOn1.css('opacity','1')
+                             .css('transition', '100ms');
+                    headlight.css('opacity','1')
                              .css('transition', '100ms');
                 },500);
             }
