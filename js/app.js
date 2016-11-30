@@ -87,7 +87,7 @@ jQuery(document).ready(function(){
     var glows = jQuery(('div[class*=glow]'));
     var indicators = jQuery(('[id*=indicator]'));
     var triangleBox = jQuery('.triangleBox');
-    var flashing;
+    
     
     function indicatorsOnOff() {
         triangleBox.on('click', function(){
@@ -107,9 +107,9 @@ jQuery(document).ready(function(){
                         status='on';
                         glows.css('opacity', '1')
                              .css('transition', '500ms');
-
                         indicators.css('opacity', '1')
                                   .css('transition', '500ms');
+                        
                     } else {
                         status='off';
                         glows.css('opacity', '0');
@@ -120,6 +120,63 @@ jQuery(document).ready(function(){
         });
     };
     indicatorsOnOff();
+    
+    // Gearbox makes wheel rotating
+    
+    var gP = jQuery('.gear_P');
+    var gN = jQuery('.gear_N');
+    var gR = jQuery('.gear_R');
+    var gD = jQuery('.gear_D');
+    var allGears = jQuery(('div[class*=gear_]'));
+    
+    var knob = jQuery('.gearKnobLow');
+    
+    var wheelF = jQuery('.wheel1');
+    var wheelR = jQuery('.wheel2');
+    
+    
+    function gearBox() {
+        
+        gD.on('click', function(){
+           knob.css('left', '186'+'px')
+                .css('transition', '1s');
+           setTimeout(function() {
+                wheelF.css('transform','rotate(200000deg)')
+                      .css('transition', '20s');
+            },1000);
+        });
+        
+        
+        gR.on('click', function(){
+            knob.css('left', '139'+'px')
+                .css('transition', '1s');
+        });
+        
+        
+        gN.on('click', function(){
+            knob.css('left', '92'+'px')
+                .css('transition', '1s');
+        });
+        
+        gP.on('click', function(){
+            knob.css('left', '45'+'px')
+                .css('transition', '1s');
+        });
+    }
+    gearBox();
+    
+    
+    
+    
+//    function gearsColor() {
+//        allGears.on('mouseover', function(){
+//            jQuery(this).css('color', '#fbf098');
+//        });
+//        allGears.on('mouseout', function(){
+//            jQuery(this).css('color', 'black');
+//        });
+//    };
+//    gearsColor();
     
     
     
