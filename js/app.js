@@ -139,7 +139,6 @@ jQuery(document).ready(function(){
     
     var wheelF = jQuery('.wheel1');
     var wheelR = jQuery('.wheel2');
-    console.log(wheelF);
     
     
     function gearBox() {
@@ -237,6 +236,18 @@ jQuery(document).ready(function(){
         });
     }
     gearBox();
+    
+    // history menu
+    
+    var historyButton = jQuery('.historyBtn');
+    var historyBox = jQuery('.history');
+    
+    function history() {
+        historyButton.on('click', function(){
+            historyBox.fadeToggle();
+        });
+    };
+    history();
     
     
     
