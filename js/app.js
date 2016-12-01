@@ -249,6 +249,20 @@ jQuery(document).ready(function(){
     };
     history();
     
+    // spec menu
+    
+    var specButton = jQuery('.specBtn');
+    var specBox = jQuery('.spec');
+    
+    function spec() {
+        specButton.on('click', function(){
+            specBox.fadeToggle();
+        });
+    };
+    spec();
+    
+    
+    
     
     
     
