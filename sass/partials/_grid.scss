@@ -31,9 +31,16 @@
         .col-2 {
             width: 32.66667%;
         }
-        .col-8 {
-            width: 85%;
-        }
-    }
+            .col-8 {
+                width: 85%;
+            }
+                .col-4 {
+                    width: 100%;
+                }
+                    li {
+                        background-color: #b9bfc0;
+                        margin-top: 2%;
+                    }
+}
 
 
