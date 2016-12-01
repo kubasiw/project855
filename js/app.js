@@ -139,7 +139,6 @@ jQuery(document).ready(function(){
     
     var wheelF = jQuery('.wheel1');
     var wheelR = jQuery('.wheel2');
-    console.log(wheelF);
     
     
     function gearBox() {
@@ -237,6 +236,49 @@ jQuery(document).ready(function(){
         });
     }
     gearBox();
+    
+    // history menu
+    var historyButton = jQuery('.historyBtn');
+    var historyBox = jQuery('.history');
+    var specButton = jQuery('.specBtn');
+    var specBox = jQuery('.spec');
+    
+    function history() {
+        historyButton.on('click', function(){
+            historyBox.fadeToggle();
+            if (specBox.css('display') == 'block'){
+                specBox.css('display', 'none')
+            };
+        });
+    };
+    history();
+    
+    // spec menu
+    function spec() {
+        specButton.on('click', function(){
+            specBox.fadeToggle();
+            if (historyBox.css('display') == 'block'){
+                historyBox.css('display', 'none')
+            };
+        });
+    };
+    spec();
+    
+    // dashbord hiding
+    var ctrlPanel = jQuery('.ctrlPanel');
+    var ctrlBtn = jQuery('.ctrlBtn');
+    
+    function panel() {
+        
+        ctrlBtn.on('click', function(){
+            ctrlPanel.fadeToggle();
+        });
+    };
+    panel();
+    
+    
+    
+    
     
     
     
