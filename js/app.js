@@ -147,7 +147,7 @@ jQuery(document).ready(function(){
         gD.on('click', function(){
             //na tym skończyłem wczoraj
             jQuery(this).addClass('buttonLights');
-            knob.css('left', '186'+'px')
+            knob.css('left', '150'+'px')
                 .css('transition', '1s')
                 .removeClass('flashWhite');
             
@@ -173,7 +173,7 @@ jQuery(document).ready(function(){
         
         
         gR.on('click', function(){
-            knob.css('left', '139'+'px')
+            knob.css('left', '100'+'px')
                 .css('transition', '1s')
             
             // Na tym skończyłem wczoraj
@@ -207,7 +207,7 @@ jQuery(document).ready(function(){
         
         
         gN.on('click', function(){
-            knob.css('left', '92'+'px')
+            knob.css('left', '72'+'px')
                 .css('transition', '1s')
                 .removeClass('flashWhite');
             
