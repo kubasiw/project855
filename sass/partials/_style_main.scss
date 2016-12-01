@@ -12,17 +12,20 @@ body {
 
 .left {float: left;}
 .help-border {border: 1px solid orange;}
-.flex {display: flex;}
+.flex {display: flex; flex-wrap:wrap;}
 .just-center {justify-content: center;}
 
-
+.ctrlPanel {
+    justify-content: space-between;
+}
 
 .keyBox {
     position: relative;
     cursor: pointer;
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 120px;
+    
 }
 
 .keysCircle1 {
@@ -30,8 +33,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:120px;
-    height:120px;
+    width: 95px;
+    height: 95px;
     background-color: lightgray;
     border-radius: 50%;
     border: 2px solid black;
@@ -42,8 +45,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background-color: lightslategrey;
     border-radius: 50%;
     border: 1px solid black;
@@ -52,7 +55,7 @@ body {
 .key {
     position: absolute;
     width: 15px;
-    height:95px;
+    height: 58px;
     background-color: dimgrey;
     border: 2px solid black;
     border-radius: 5px;
@@ -63,19 +66,12 @@ body {
     font-size: 16px;
 }
 
-.start {
-    position: absolute;
-    font-size: 16px;
-    left: 145px;
-    top: 50px;
-}
-
 .lightBox {
     position: relative;
     cursor: pointer;
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 120px;
 }
 
 .lightCircle1 {
@@ -129,7 +125,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 120px;
 }
 
 .triangleRed {
@@ -159,7 +155,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 120px;
 }
 
 .gearButtons {
@@ -167,9 +163,10 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
+    font-size: 5vw;
         div {
             cursor: pointer;
+            padding: 3px;
         }
 }
 
@@ -178,12 +175,12 @@ body {
     display: flex;
     justify-content: center;
     align-items:flex-end;
-    height: 100%;
+    height: 120px;
 }
 
 .gearBottom {
     position: absolute;
-    width: 250px;
+    width: 200px;
     height: 25px;
     top: 85px;
     border: 2px solid black;

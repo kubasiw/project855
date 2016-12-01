@@ -1,4 +1,5 @@
 @media (max-width: 640px) {
+    
     .media1 {
         display: flex;
         flex-direction: column;
@@ -9,9 +10,20 @@
     }
     .media2 {
         width: 100%;
+        li {
+            transform: scale(1.2);
+        }
+        .col-2 {
+            width: 32.66667%;
+        }
     }
-    .media3 {
-        display: flex;
-        flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+    .lightBox,
+    .keyBox,
+    .triangleBox,
+    .gearKnobBox {
+        transform: scale(0.7);
     }
 }
