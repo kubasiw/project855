@@ -269,6 +269,7 @@ jQuery(document).ready(function(){
     var ctrlBtn = jQuery('.ctrlBtn');
     
     function panel() {
+        
         ctrlBtn.on('click', function(){
             ctrlPanel.fadeToggle();
         });

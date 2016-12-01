@@ -14,18 +14,28 @@ header {
 
 }
 
+
+
 .history {
     @extend %historyAndSpec;
-    .historyText {
-        @extend %historyAndSpecText;
-    }
+}
+
+.historyText {
+    padding: 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: rgba(250, 250, 250, 0.6);
 }
 
 .spec {
     @extend %historyAndSpec;
-    .specText {
-        @extend %historyAndSpecText;
-    }
+}
+
+.specText {
+    padding: 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: rgba(250, 250, 250, 0.6);
 }
 
 
