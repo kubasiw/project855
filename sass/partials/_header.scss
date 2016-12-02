@@ -17,6 +17,7 @@ header {
 
 .history {
     @extend %historyAndSpec;
+    left: 15%; //for firefox;
 }
 
 .historyText {
@@ -28,6 +29,7 @@ header {
 
 .spec {
     @extend %historyAndSpec;
+    left: 15%; //for firefox;
 }
 
 .specText {
