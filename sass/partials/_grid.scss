@@ -23,8 +23,8 @@
 }
 
 .row {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
 }
 
 @media (max-width: 640px) {
@@ -37,9 +37,16 @@
                 .col-4 {
                     width: 100%;
                 }
-                    li {
-                        margin-top: 2%;
+                    .col-3 {
+                        width: 45%;
                     }
+                        li {
+                            margin-top: 2%;
+                        }
+                            .gearButtons div {
+                                padding: 2vw;
+                                font-size: 13vw;
+                            }
 }
 
 
