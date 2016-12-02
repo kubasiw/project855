@@ -89,5 +89,15 @@
     }
 }
 
+@media (max-width: 300px) {
+    .keyBox,
+    .lightBox,
+    .triangleBox,
+    .gearboxBox,
+    .gearKnobBox {
+        transform: scale(0.5);
+    }
+}
+
 
 

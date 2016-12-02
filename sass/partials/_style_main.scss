@@ -32,6 +32,7 @@ body {
     cursor: pointer;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 120px;
 }
 
@@ -66,11 +67,6 @@ body {
     background-color: dimgrey;
     border: 2px solid black;
     border-radius: 5px;
-}
-
-.off {
-    position: absolute;
-    font-size: 16px;
 }
 
 .lightBox {
