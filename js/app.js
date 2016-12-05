@@ -242,6 +242,7 @@ jQuery(document).ready(function(){
     var historyBox = jQuery('.history');
     var specButton = jQuery('.specBtn');
     var specBox = jQuery('.spec');
+    var body = jQuery('body');
     
     function history() {
         historyButton.on('click', function(){
@@ -275,6 +276,17 @@ jQuery(document).ready(function(){
         });
     };
     panel();
+    
+    function closing () {
+        body.on('click', function(){
+            if (historyBox.css('display') == 'block') {
+                historyBox.css('display', 'none')
+            };
+        });
+    };
+    closing();
+    
+    
     
     
     
