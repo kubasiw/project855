@@ -239,13 +239,24 @@ jQuery(document).ready(function(){
     
     // history menu
     var historyButton = jQuery('.historyBtn');
+    var historyButtonA = jQuery('.historyBtn a');
     var historyBox = jQuery('.history');
     var specButton = jQuery('.specBtn');
+    var specButtonA = jQuery('.specBtn a');
     var specBox = jQuery('.spec');
     
     function history() {
+        
         historyButton.on('click', function(){
+            
             historyBox.fadeToggle();
+            historyButtonA.toggleClass('lightYellow');
+            
+            if (specButtonA.hasClass('lightYellow')) {
+                specButtonA.removeClass('lightYellow')
+            };
+            
+            
             if (specBox.css('display') == 'block'){
                 specBox.css('display', 'none')
             };
@@ -253,28 +264,42 @@ jQuery(document).ready(function(){
     };
     history();
     
+    
     // spec menu
     function spec() {
         specButton.on('click', function(){
+            
             specBox.fadeToggle();
+            specButtonA.toggleClass('lightYellow');
+            
+            if (historyButtonA.hasClass('lightYellow')) {
+                historyButtonA.removeClass('lightYellow')
+            };
+            
             if (historyBox.css('display') == 'block'){
                 historyBox.css('display', 'none')
             };
         });
     };
-    spec();
+    spec();  
     
     // dashbord hiding
     var ctrlPanel = jQuery('.ctrlPanel');
     var ctrlBtn = jQuery('.ctrlBtn');
+    var ctrlBtnA = jQuery('.ctrlBtn a');
     
     function panel() {
         
         ctrlBtn.on('click', function(){
+            
             ctrlPanel.fadeToggle();
+            ctrlBtnA.toggleClass('lightYellow');
         });
     };
     panel();
+    
+    
+    
     
     
     
