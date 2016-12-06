@@ -27,6 +27,17 @@ body {
     display: none;
 }
 
+.panelLook {
+    display: none; 
+    margin: 0 auto;
+    padding: 0.7vw;
+    width: 95%;
+    border: 0.1rem solid black;
+    border-radius: 20px 20px 20px 20px;
+    background-color: rgba(228, 228, 228, 0.58);
+    z-index: 1;
+}
+
 .keyBox {
     position: relative;
     cursor: pointer;
@@ -35,6 +46,8 @@ body {
     align-items: center;
     height: 120px;
 }
+
+
 
 .keysCircle1 {
     position: absolute;
@@ -196,7 +209,7 @@ body {
 
 .gearBottom {
     position: absolute;
-    width: 200px;
+    width: 170px;
     height: 25px;
     top: 85px;
     left: 0; // for Firefox
@@ -208,9 +221,9 @@ body {
 .gearKnobLow {
     position: absolute;
     width: 20px;
-    height: 70px;
-    top: -70px;
-    left: 45px;
+    height: 50px;
+    top: -50px;
+    left: 30px;
     border: 2px solid black;
     background-color: dimgrey;
 }

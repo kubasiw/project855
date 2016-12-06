@@ -22,6 +22,20 @@ jQuery(document).ready(function(){
     var headlight = jQuery('#headlight');
     var lightsOn1 = jQuery('.lightsOn1');
     
+    // VARS gearbox
+    var gP = jQuery('.gear_P');
+    var gN = jQuery('.gear_N');
+    var gR = jQuery('.gear_R');
+    var gD = jQuery('.gear_D');
+    var allGears = jQuery(('div[class*=gear_]'));
+    
+    var knob = jQuery('.gearKnobLow');
+    var revLightGlow = jQuery('.revLightOn');
+    var revLight = jQuery('#rearLight');
+    
+    var wheelF = jQuery('.wheel1');
+    var wheelR = jQuery('.wheel2');
+    
     
     // engine on / off
     function engineOnOff() { 
@@ -41,6 +55,7 @@ jQuery(document).ready(function(){
                  key.addClass('engineIsOn');
                  key.css('transform','rotate(90deg)')
                     .css('transition', '500ms');
+                
                  setTimeout(function() {
                     smokeBox.css('opacity','1')
                             .css('transition', '1500ms');
@@ -56,7 +71,7 @@ jQuery(document).ready(function(){
         lightBox.on('click', function(){
            
             if (light.hasClass('lightsIsOn')) {
-             
+                
                 light.removeClass('lightsIsOn');
                 light.css('transform','rotate(0deg)')
                      .css('transition', '500ms');
@@ -65,6 +80,7 @@ jQuery(document).ready(function(){
                              .css('transition', '100ms');
                     headlight.css('opacity','0')
                              .css('transition', '100ms');
+                     allGears.css('color', 'black');
                 },500);
              
             } else {
@@ -76,6 +92,24 @@ jQuery(document).ready(function(){
                              .css('transition', '100ms');
                     headlight.css('opacity','1')
                              .css('transition', '100ms');
+                     
+                     
+                     if (knob.css('left') == '30'+'px') {
+                         gP.css('color', 'white');
+                     };
+                     
+                     if (knob.css('left') == '60'+'px') {
+                         gN.css('color', 'white');
+                     };
+                     
+                     if (knob.css('left') == '90'+'px') {
+                         gR.css('color', 'white');
+                     };
+                     
+                     if (knob.css('left') == '120'+'px') {
+                         gD.css('color', 'white');
+                     };
+                    
                 },500);
             }
         });
@@ -125,41 +159,29 @@ jQuery(document).ready(function(){
     };
     indicatorsOnOff();
     
-    // Gearbox makes wheel rotating
-    
-    var gP = jQuery('.gear_P');
-    var gN = jQuery('.gear_N');
-    var gR = jQuery('.gear_R');
-    var gD = jQuery('.gear_D');
-    var allGears = jQuery(('div[class*=gear_]'));
-    
-    var knob = jQuery('.gearKnobLow');
-    var revLightGlow = jQuery('.revLightOn');
-    var revLight = jQuery('#rearLight');
-    
-    var wheelF = jQuery('.wheel1');
-    var wheelR = jQuery('.wheel2');
-    
+    // Gearbox
     
     function gearBox() {
         
         gD.on('click', function(){
-            //na tym skończyłem wczoraj
-            jQuery(this).addClass('buttonLights');
-            knob.css('left', '150'+'px')
+
+            knob.css('left', '120'+'px')
                 .css('transition', '1s')
-                .removeClass('flashWhite');
-            
-            
-            if (!knob.hasClass('flashWhite')) {
+
                 setTimeout(function(){
                     revLight.css('opacity', '0')
                             .css('transition', '500ms');
                     revLightGlow.css('opacity', '0')
                                 .css('transition', '500ms');
                 },500);
-            }
             
+            if (light.hasClass('lightsIsOn')) {
+                allGears.css('color', 'black')
+                        .css('transition', '500ms');
+                gD.css('color', 'white')
+                  .css('transition', '500ms');
+            };
+
             if (key.hasClass('engineIsOn')) {
                 setTimeout(function() {
                     wheelF.css('transform','rotate(-10000deg)')
@@ -169,20 +191,13 @@ jQuery(document).ready(function(){
                 },500);
             };
         });
-        
-        
+
+
         gR.on('click', function(){
-            knob.css('left', '100'+'px')
+            knob.css('left', '90'+'px')
                 .css('transition', '1s')
-            
-            // Na tym skończyłem wczoraj
-            if (allGears.hasClass('buttonLights')) {
-                allGears.removeClass('buttonLights'), function(){
-                    gR.addClass('buttonLights');
-                };
-            };
-                
-            
+
+
             if (key.hasClass('engineIsOn')) {
                 knob.addClass('flashWhite');
                 setTimeout(function() {
@@ -192,6 +207,15 @@ jQuery(document).ready(function(){
                           .css('transition', '20s');
                 },1000);
             };
+           
+            
+            if (light.hasClass('lightsIsOn')) {
+                allGears.css('color', 'black')
+                        .css('transition', '500ms');
+                gR.css('color', 'white')
+                  .css('transition', '500ms');
+            };
+
             
             if (knob.hasClass('flashWhite')) {
                 setTimeout(function(){
@@ -202,14 +226,13 @@ jQuery(document).ready(function(){
                 },1000);
             }
         });
-        
-        
-        
+
+
         gN.on('click', function(){
-            knob.css('left', '72'+'px')
+            knob.css('left', '60'+'px')
                 .css('transition', '1s')
                 .removeClass('flashWhite');
-            
+
             if (!knob.hasClass('flashWhite')) {
                 setTimeout(function(){
                     revLight.css('opacity', '0')
@@ -218,13 +241,21 @@ jQuery(document).ready(function(){
                                 .css('transition', '500ms');
                 },500);
             }
+            
+            if (light.hasClass('lightsIsOn')) {
+                allGears.css('color', 'black')
+                        .css('transition', '500ms');
+                gN.css('color', 'white')
+                  .css('transition', '500ms');
+            };
+            
         });
-        
+
         gP.on('click', function(){
-            knob.css('left', '45'+'px')
+            knob.css('left', '30'+'px')
                 .css('transition', '1s')
                 .removeClass('flashWhite');
-            
+
             if (!knob.hasClass('flashWhite')) {
                 setTimeout(function(){
                     revLight.css('opacity', '0')
@@ -233,8 +264,15 @@ jQuery(document).ready(function(){
                                 .css('transition', '500ms');
                 },500);
             }
+            
+            if (light.hasClass('lightsIsOn')) {
+                allGears.css('color', 'black')
+                        .css('transition', '500ms');
+                gP.css('color', 'white')
+                  .css('transition', '500ms');
+            };
         });
-    }
+    };
     gearBox();
     
     // history menu
