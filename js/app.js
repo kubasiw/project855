@@ -92,7 +92,24 @@ jQuery(document).ready(function(){
                              .css('transition', '100ms');
                     headlight.css('opacity','1')
                              .css('transition', '100ms');
-                    gP.css('color', 'white');
+                     
+                     
+                     if (knob.css('left') == '30'+'px') {
+                         gP.css('color', 'white');
+                     };
+                     
+                     if (knob.css('left') == '60'+'px') {
+                         gN.css('color', 'white');
+                     };
+                     
+                     if (knob.css('left') == '90'+'px') {
+                         gR.css('color', 'white');
+                     };
+                     
+                     if (knob.css('left') == '120'+'px') {
+                         gD.css('color', 'white');
+                     };
+                    
                 },500);
             }
         });
