@@ -15,12 +15,14 @@ jQuery(document).ready(function(){
     // Keys
     var keyBox = jQuery('.keyBox');
     var key = jQuery('.key');
+    var keysCircle = jQuery('.keysCircle1');
     
     // Lights
     var lightBox = jQuery('.lightBox');
     var light = jQuery('.light');
     var headlight = jQuery('#headlight');
     var lightsOn1 = jQuery('.lightsOn1');
+    var lightCircle = jQuery('.lightCircle1');
     
     // VARS gearbox
     var gP = jQuery('.gear_P');
@@ -33,13 +35,22 @@ jQuery(document).ready(function(){
     var revLightGlow = jQuery('.revLightOn');
     var revLight = jQuery('#rearLight');
     
+    //suspension
     var wheelF = jQuery('.wheel1');
     var wheelR = jQuery('.wheel2');
+    
+    var normal = jQuery('.sus_Normal');
+    var sport = jQuery('.sus_Sport');
+    var track = jQuery('.sus_Track');
+    var shadow = jQuery('.shadow');
+    var allSus = jQuery(('div[class*=sus_]'));
+    
+    
     
     
     // engine on / off
     function engineOnOff() { 
-        keyBox.on('click', function(){
+        keysCircle.on('click', function(){
            
             if (key.hasClass('engineIsOn')) {
              
@@ -68,7 +79,7 @@ jQuery(document).ready(function(){
     
     // lights on / off
     function lightsOnOff() { 
-        lightBox.on('click', function(){
+        lightCircle.on('click', function(){
            
             if (light.hasClass('lightsIsOn')) {
                 
@@ -81,12 +92,15 @@ jQuery(document).ready(function(){
                     headlight.css('opacity','0')
                              .css('transition', '100ms');
                      allGears.css('color', 'black');
+                       allSus.css('color', 'black');
                 },500);
              
             } else {
+                
                  light.addClass('lightsIsOn');
                  light.css('transform','rotate(90deg)')
                        .css('transition', '500ms');
+                
                  setTimeout(function() {
                     lightsOn1.css('opacity','1')
                              .css('transition', '100ms');
@@ -109,6 +123,17 @@ jQuery(document).ready(function(){
                      if (knob.css('left') == '120'+'px') {
                          gD.css('color', 'white');
                      };
+                     
+                     
+                     if (wheelF.css('top') == '157.172'+'%') {
+                         normal.css('color', 'white');
+                     };
+                     if (wheelF.position() == '57'+'%') {
+                         sport.css('color', 'white');
+                     };
+                     if (wheelF.position() == '55%'+'%') {
+                         track.css('color', 'white');
+                     };
                     
                 },500);
             }
@@ -122,9 +147,10 @@ jQuery(document).ready(function(){
     var indicators = jQuery(('[id*=indicator]'));
     var triangleBox = jQuery('.triangleBox');
     var triangleWhite = jQuery('.triangleWhite');
+    var triangleRed = jQuery('.triangleRed');
     
     function indicatorsOnOff() {
-        triangleBox.on('click', function(){
+        triangleRed.on('click', function(){
            
             if (jQuery(this).attr('on')){
                 clearInterval(flashing);
@@ -335,6 +361,61 @@ jQuery(document).ready(function(){
         });
     };
     panel();
+    
+    
+
+    
+    function suspension() {
+        
+        normal.on('click', function(){
+            wheelF.css('top', '58'+'%')
+                  .css('transition', '2s');
+            wheelR.css('top', '58'+'%')
+                  .css('transition', '2s');
+            shadow.css('top', '91.5'+'%')
+                  .css('transition', '2s');
+            
+            if (light.hasClass('lightsIsOn')) {
+                allSus.css('color', 'black')
+                      .css('transition', '500ms');
+                normal.css('color', 'white')
+                      .css('transition', '500ms');
+            };
+        });
+        
+        sport.on('click', function(){
+            wheelF.css('top', '57'+'%')
+                  .css('transition', '2s');
+            wheelR.css('top', '57'+'%')
+                  .css('transition', '2s');
+            shadow.css('top', '90.5'+'%')
+                  .css('transition', '2s');
+            
+            if (light.hasClass('lightsIsOn')) {
+                allSus.css('color', 'black')
+                      .css('transition', '500ms');
+                sport.css('color', 'white')
+                      .css('transition', '500ms');
+            };
+        });
+        
+        track.on('click', function(){
+            wheelF.css('top', '55'+'%')
+                  .css('transition', '2s');
+            wheelR.css('top', '55'+'%')
+                  .css('transition', '2s');
+            shadow.css('top', '89'+'%')
+                  .css('transition', '2s');
+            
+            if (light.hasClass('lightsIsOn')) {
+                allSus.css('color', 'black')
+                      .css('transition', '500ms');
+                track.css('color', 'white')
+                      .css('transition', '500ms');
+            };
+        });
+    };
+    suspension();
     
     
     

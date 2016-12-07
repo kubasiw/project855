@@ -40,7 +40,6 @@ body {
 
 .keyBox {
     position: relative;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,6 +51,7 @@ body {
 .keysCircle1 {
     position: absolute;
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     width: 95px;
@@ -90,7 +90,6 @@ body {
 
 .lightBox {
     position: relative;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     height: 120px;
@@ -99,6 +98,7 @@ body {
 .lightCircle1 {
     position: absolute;
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     width:120px;
@@ -149,7 +149,6 @@ body {
 
 .triangleBox {
     position: relative;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,6 +157,7 @@ body {
 
 .triangleRed {
     position: absolute;
+    cursor: pointer;
     width: 100px;
     height: 100px;
     top: -8px; // for Firefox
@@ -192,7 +192,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 5vw;
+    font-size: 4vw;
         div {
             cursor: pointer;
             padding: 1vw;
@@ -237,6 +237,19 @@ body {
     background-color: darkslategrey;
     border: 1px solid silver;
     border-radius: 50%;
-    
+}
+
+.spnBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+    font-size: 2.5vw;
+    padding: 0;
+    div {
+        cursor: pointer;
+    }
 }
 
