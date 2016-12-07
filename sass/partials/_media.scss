@@ -8,6 +8,9 @@
     .gearKnobBox {
         transform: scale(0.6);
     }
+    .spanBox {
+        font-size: 4vw;
+    }
 }
 
 @media (max-width: 640px) {
@@ -30,7 +33,13 @@
                 }
                     .col-2 {
                         width: 32.66667%;
-                    }
+                    }   
+            }
+            .spnBox {
+                font-size: 5vw;
+                div {
+                    padding: 1vw;
+                }
             }
 }
 
@@ -92,14 +101,16 @@
     .panelLook {
         padding: 0.1vw;
     }
+    .gearKnobBox {
+        transform: scale(0.4);
+    }
 }
 
 @media (max-width: 300px) {
     .keyBox,
     .lightBox,
     .triangleBox,
-    .gearboxBox,
-    .gearKnobBox {
+    .gearboxBox {
         transform: scale(0.5);
     }
 }

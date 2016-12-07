@@ -7,16 +7,21 @@
     position: absolute;
     width: 90%;
     height: 5%;
-    top: 90%;
+    top: 91.5%;
     left: 5%;
     border-radius: 50%;
     background-color: rgb(0, 0, 0);
 }
 
+svg {
+    top: 0;
+}
+
+
 .wheel1 {
         position: absolute;
         width: 13.2%;
-        top: 56%;
+        top: 58%;
         left: 13.3%;
         transform: rotate(0deg);
         transition: 6s;
@@ -25,7 +30,7 @@
 .wheel2 {
     position: absolute;
     width: 13.2%;
-    top: 56%;
+    top: 58%;
     left: 71.3%;
 }
 
